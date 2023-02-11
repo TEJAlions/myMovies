@@ -1,1 +1,9 @@
-<app-movies></app-movies>
+<mat-toolbar color="primary">
+    <span>My Movies</span>
+    <nav>
+        <button mat-stroked-button color="primary" class="action_buttons"routerLink="movies" >Movies</button>
+        <button mat-stroked-button color="primary" class="action_buttons" routerLink="theators">Theators</button>
+    </nav>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
