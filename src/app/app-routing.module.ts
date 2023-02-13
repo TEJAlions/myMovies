@@ -5,7 +5,7 @@ import { MoviesTheatorsModule } from './movies-theators/movies-theators.module';
 
 const routes: Routes = [
   {path:'movies', loadChildren: () => import('./movies/movies.module').then(m=>m.MoviesModule)},
-  // {path:'', redirectTo:'movies',pathMatch:'full'},
+  {path:'', redirectTo:'movies',pathMatch:'full'},
   {path:'theators', loadChildren: () => import('./movies-theators/movies-theators.module').then(m=>m.MoviesTheatorsModule)},
 ];
 
