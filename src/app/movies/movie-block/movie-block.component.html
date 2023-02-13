@@ -1,0 +1,6 @@
+<div class="wrapper">
+    <div>{{movieType}}</div>
+    <div class="container">
+        <app-movies-card *ngFor="let movie of movieList" [movieId]="movie"></app-movies-card>
+    </div>
+</div>

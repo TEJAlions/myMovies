@@ -1,3 +1,10 @@
-
-<img [src]="source" alt="image is nbroke">
-<div>hi</div>
+<div class="wrapper">
+    <div class="loader">
+        <mat-progress-spinner></mat-progress-spinner>
+    </div>
+    <div class="container">
+        <app-movie-block [movieType]="'popular'"></app-movie-block>
+        <app-movie-block [movieType]="'top_rated'"></app-movie-block>
+        <app-movie-block [movieType]="'upcoming'"></app-movie-block>
+    </div>
+</div>

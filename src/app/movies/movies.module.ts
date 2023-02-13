@@ -3,21 +3,31 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ParamInterceptor } from './movies_interceptor';
 import { MoviesComponent } from './movies.component';
+import { MoviesRoutingModule } from './movies-routing.module';
+import { MoviesCardComponent } from './movies-card/movies-card.component';
+import { ApiService } from './services/api.service';
+import { MaterialModule } from '../material.module';
+import { MovieBlockComponent } from './movie-block/movie-block.component';
 
 
 
 @NgModule({
   declarations: [
-    MoviesComponent
+    MoviesComponent,
+    MoviesCardComponent,
+    MovieBlockComponent
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    MoviesRoutingModule,
+    MaterialModule
   ],
   exports:[
     MoviesComponent
   ],
   providers: [
+    ApiService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ParamInterceptor,
