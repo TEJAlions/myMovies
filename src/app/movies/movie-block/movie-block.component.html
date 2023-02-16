@@ -1,6 +1,22 @@
 <div class="wrapper">
     <div>{{movieType}}</div>
-    <div class="container">
-        <app-movies-card *ngFor="let movie of movieList" [movieId]="movie"></app-movies-card>
+    <div *ngIf="loader" class="loader">
+        <mat-spinner></mat-spinner>
+    </div>
+    <div *ngIf="!loader" class="container">
+        <div *ngFor="let movie of movieList" class="card-container">
+            <div class="image" AdultContent [isAudiltContent]="movie.adult">
+                <span class="adult_content"><span>18<sup>+</sup></span></span>
+                <img [src]="c.baseUrl+c.s+movie?.poster_path" (click)="openMovieCard(movie.id)">
+            </div>
+            <div class="content">
+                <div class="tittle">
+                    {{movie?.title}}
+                </div>
+                <div class="date">
+                    {{movie?.release_date | date}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
