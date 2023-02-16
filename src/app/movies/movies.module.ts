@@ -8,6 +8,7 @@ import { MoviesCardComponent } from './movies-card/movies-card.component';
 import { ApiService } from './services/api.service';
 import { MaterialModule } from '../material.module';
 import { MovieBlockComponent } from './movie-block/movie-block.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -21,7 +22,8 @@ import { MovieBlockComponent } from './movie-block/movie-block.component';
     CommonModule,
     HttpClientModule,
     MoviesRoutingModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ],
   exports:[
     MoviesComponent

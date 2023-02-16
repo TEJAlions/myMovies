@@ -1,18 +1,4 @@
 <div class="wrapper">
-    <div *ngIf="loader" class="loader">
-        <mat-spinner></mat-spinner>
-    </div>
-    <div *ngIf="!loader" class="container">
-        <div class="image">
-            <img [src]="c.baseUrl+c.s+movie?.poster_path">
-        </div>
-        <div class="content">
-            <div class="tittle">
-                {{movie?.title}}
-            </div>
-            <div class="date">
-                {{movie?.release_date | date}}
-            </div>
-        </div>
-    </div>
+
+    <img [src]="c.baseUrl+c.xxL+movie?.backdrop_path">
 </div>

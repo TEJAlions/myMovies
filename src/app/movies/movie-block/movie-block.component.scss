@@ -1,3 +1,35 @@
 .container {
     display: flex;
 }
+.card-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+img {
+    border-radius: 0.8rem;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    .tittle {
+        font-family: 'Papyrus';
+        font-size: 20px;
+    }
+    .date {
+        font-family: 'Trebuchet MS';
+        font-size: 1rem;
+    }
+}
+.adult_content {
+    display: none;
+    position: absolute;
+    background-color: #0e00ff99;
+    color: white;
+    border-radius: 0.5rem;
+    margin: 0.7rem 0 0 0.5rem;
+    height: 2.5rem;
+    width: 2rem;
+    justify-content: center;
+    align-items: center;
+}
